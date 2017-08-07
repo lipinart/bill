@@ -1,15 +1,5 @@
 $(document).ready(function() {
-	//nav
-	/*
-	var thisUrl = document.location.href.split("/")[3].split("?");
-    $.each($('.menu li'),function(){
-        if ($(this + 'a').attr("href")==thisUrl[0]){
-            $(".active").removeClass("active");
-            $(this).addClass("active");
-        }
-    });
-	*/
-
+	
 	$(".btn-close").on("click", function(e){
 		e.preventDefault();
 		var close = $(this).attr("data-target");
@@ -24,11 +14,21 @@ $(document).ready(function() {
 	$("body").on("click", "a.btn-toggle", function(e){
 		e.preventDefault();
 		var target = $(this).attr("href");
+		yaCounter45548784.reachGoal("order");
 		if(target != '#'){
 			$("html").addClass("fix-body");
 			$(".modal-"+target).fadeIn().addClass("open");
-        }else{
-        	alert('Link blocked!');
+        }
+	});
+
+	$("body").on("click", "a.btn-getdoc", function(e){
+		e.preventDefault();
+		var target = $(this).attr("href");
+		yaCounter45548784.reachGoal("message");
+		if(target != '#'){
+			$("html").addClass("fix-body");
+			$(".modal-"+target).fadeIn().addClass("open");
+			$(".modal-docs .card").load("politic.html");
         }
 	});
 

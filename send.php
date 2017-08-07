@@ -1,11 +1,6 @@
 <?php
 // you e-mail:
-$mail_to = 'test@mail.ru';
-// SMS-notify settings:
-// phone number
-$sms_num = '78008008888';
-// ID from SMS.ru 
-$sms_id = '';
+$mail_to = 'm.schewrina@yandex.ru';
 
 
 
@@ -73,7 +68,7 @@ function generate_html_message($subject, $form_data){
 $user_name=$_POST['user_name'];
 $user_phone =$_POST['user_phone'];
 $user_email =$_POST['user_email'];
-$user_text =$_POST['user_text"'];
+$user_text =$_POST['user_text'];
 
 //validate
 if(empty($user_name) || !preg_match("/^[а-яёА-Я]+$/msiu", $user_name)){
